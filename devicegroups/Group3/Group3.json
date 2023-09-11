@@ -1,0 +1,16 @@
+{
+    "devicegroup": {
+        "groupname": "Group3"
+    },
+    "members": [
+        "1",
+        "2",
+        "4"
+    ],
+    "method": "Netmiko",
+    "commands": [
+        "1",
+        "2",
+        "4"
+    ]
+}

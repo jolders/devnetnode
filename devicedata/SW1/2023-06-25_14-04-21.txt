@@ -1,0 +1,14 @@
+- - - - * - - - * - - - - *   START  (10.24.35.254)   * - - - * - - - - * - - - - 
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet0/0     unassigned      YES unset  up                    up      
+GigabitEthernet0/1     unassigned      YES unset  up                    up      
+GigabitEthernet0/2     unassigned      YES unset  up                    up      
+GigabitEthernet0/3     unassigned      YES unset  up                    up      
+GigabitEthernet1/0     unassigned      YES unset  up                    up      
+GigabitEthernet1/1     unassigned      YES unset  up                    up      
+GigabitEthernet1/2     unassigned      YES unset  down                  down    
+GigabitEthernet1/3     unassigned      YES unset  down                  down    
+Vlan1                  10.24.35.254    YES NVRAM  up                    up      
+- - - - * - - - * - - - - *   END  (10.24.35.254)   * - - - * - - - - * - - - - 
+
+

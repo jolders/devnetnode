@@ -1,0 +1,14 @@
+{
+    "devicegroup": {
+        "groupname": "Group7"
+    },
+    "members": [],
+    "method": [
+        ""
+    ],
+    "commands": [
+        "1",
+        "2",
+        "3"
+    ]
+}

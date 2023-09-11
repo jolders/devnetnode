@@ -1,0 +1,8 @@
+{
+    "devicegroup": {
+        "groupname": "Group5"
+    },
+    "members": [],
+    "method": "Paramiko",
+    "commands": []
+}

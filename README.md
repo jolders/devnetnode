@@ -16,9 +16,9 @@ An application for Network engineers to manage Cisco devices (Python Tkinter).
 5) Restore groups of devices.
 
 # Help with installation and running
-****>>>>---YOU WILL NEED TO have installed alot of dependentcies 
+****>>>>---A list of dependencies (They may be more...)
 1) sqlite3, mysql.connector
-2) os, os.path(exists)
+2) os, os.path
 3) shutil, time, datetime
 4) tkinter, ttk, scrolledtext, messagebox, filedialog
 5) customtkinter
@@ -27,7 +27,7 @@ An application for Network engineers to manage Cisco devices (Python Tkinter).
 8) regex
 
 # Settings File (settings.py).
-****>>>>---YOU WILL NEED TO CHANGE ITEMS IN THIS FILE DEPENDING ON YOUR OWN FILE ARRANGEMENT
+****>>>>---YOU WILL NEED TO CHANGE ITEMS IN THIS FILE DEPENDING ON YOUR OWN INSTALLATION
 1) tftpserver = '10.24.35.253' # Change to your TFTP server
 2) directorylocation = "C:\\Shared\\NetDevApp3\\cisco12ct\\devicedata\\tftp_temp\\" # Windows directory identification example
 3) directorylocation = "/Shared/NetDevApp3/cisco12ct/devicedata/tftp_temp/" # Linux directory identification example

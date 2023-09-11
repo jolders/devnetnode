@@ -272,7 +272,7 @@ class App(tk.Tk):
         deviceMenu.add_command(label="Create a new Device", command=lambda:createnewdevice(self))
         deviceMenu.add_separator()
         deviceMenu.add_command(label="Edit an exsisting Device", command=lambda:changethisdevice(self))
-        deviceMenu.add_command(label="Delete selected Device", command=deletethisdevice)
+        deviceMenu.add_command(label="Delete selected Device", command=lambda:deletethisdevice(self))
         
         grpMenu = Menu(myMenu1, tearoff=0)
         myMenu1.add_cascade(label="Device Groups", menu=grpMenu)

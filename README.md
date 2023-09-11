@@ -36,15 +36,15 @@ An application for Network engineers to manage Cisco devices (Python Tkinter).
 
 # Netmiko issues (version issue)
 Sometimes Netmiko will complain.
-"No module named 'netmiko.ssh_exception'" ()
-1) Change:
-1a) from netmiko.ssh_exception import NetMikoAuthenticationException
-1b) from netmiko.ssh_exception import NetMikoTimeoutException
-1c) from netmiko.ssh_exception import SSHException
-2) To:
-2a) from netmiko.exceptions import NetMikoAuthenticationException
-2b) from netmiko.exceptions import NetMikoTimeoutException
-2c) from netmiko.exceptions import SSHException
+"No module named 'netmiko.ssh_exception'"
+1) # Change:
+2) from netmiko.ssh_exception import NetMikoAuthenticationException
+3) from netmiko.ssh_exception import NetMikoTimeoutException
+4) from netmiko.ssh_exception import SSHException
+1) # To:
+2) from netmiko.exceptions import NetMikoAuthenticationException
+3) from netmiko.exceptions import NetMikoTimeoutException
+4) from netmiko.exceptions import SSHException
 
 
 

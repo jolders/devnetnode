@@ -1,7 +1,7 @@
 # devnetnode
-An application for Network engineers to manage Cisco devices (Python Tkinter).
-Python & Netmiko provide funtional aspects.
-Tkinter and Customtkinter presents a GUI to the user.
+1) An application for Network engineers to manage Cisco devices (Python Tkinter).
+2) Python & Netmiko provide funtional aspects.
+3) Tkinter and Customtkinter presents a GUI to the user.
 
 # Device key features:
 1) Create device profiles (ip address, hostname, Username, password, device type, config file) 

@@ -17,23 +17,22 @@ An application for Network engineers to manage Cisco devices (Python Tkinter).
 
 # Help with installation and running
 ****>>>>---YOU WILL NEED TO have installed alot of dependentcies 
-sqlite3, mysql.connector
-os, os.path(exists)
-shutil, time, datetime
-tkinter, ttk, scrolledtext, messagebox, filedialog
-customtkinter
-Netmiko, paramiko
-PIL, ImageTk, Image
-regex
-from 
+1) sqlite3, mysql.connector
+2) os, os.path(exists)
+3) shutil, time, datetime
+4) tkinter, ttk, scrolledtext, messagebox, filedialog
+5) customtkinter
+6) Netmiko, paramiko
+7) PIL, ImageTk, Image
+8) regex
 
 # Settings File (settings.py).
 ****>>>>---YOU WILL NEED TO CHANGE ITEMS IN THIS FILE DEPENDING ON YOUR OWN FILE ARRANGEMENT
-tftpserver = '10.24.35.253' # Change to your TFTP server
-directorylocation = "C:\\Shared\\NetDevApp3\\cisco12ct\\devicedata\\tftp_temp\\" # Windows directory identification example
-directorylocation = "/Shared/NetDevApp3/cisco12ct/devicedata/tftp_temp/" # Linux directory identification example
+1) tftpserver = '10.24.35.253' # Change to your TFTP server
+2) directorylocation = "C:\\Shared\\NetDevApp3\\cisco12ct\\devicedata\\tftp_temp\\" # Windows directory identification example
+3) directorylocation = "/Shared/NetDevApp3/cisco12ct/devicedata/tftp_temp/" # Linux directory identification example
 # Ammend this list to present commands you want.
-listOfCMDs = ['show version','show running-config','show ip interface brief','show ip route','show interface gigabitEthernet 0/0','show vlan']
+1) listOfCMDs = ['show version','show running-config','show ip interface brief','show ip route','show interface gigabitEthernet 0/0','show vlan']
 
 
 

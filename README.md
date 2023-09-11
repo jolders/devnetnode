@@ -34,5 +34,18 @@ An application for Network engineers to manage Cisco devices (Python Tkinter).
 # Ammend this list to present commands you want.
 1) listOfCMDs = ['show version','show running-config','show ip interface brief','show ip route','show interface gigabitEthernet 0/0','show vlan']
 
+# Netmiko issues (version issue)
+Sometimes Netmiko will complain.
+"No module named 'netmiko.ssh_exception'" ()
+1) Change:
+from netmiko.ssh_exception import NetMikoAuthenticationException
+from netmiko.ssh_exception import NetMikoTimeoutException
+from netmiko.ssh_exception import SSHException
+2) To:
+from netmiko.exceptions import NetMikoAuthenticationException
+from netmiko.exceptions import NetMikoTimeoutException
+from netmiko.exceptions import SSHException
+
+
 
 

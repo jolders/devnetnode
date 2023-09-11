@@ -1,2 +1,2 @@
 # devnetnode
-A python tkinter application for cisco device automation
+A python tkinter application for cisco device automation.

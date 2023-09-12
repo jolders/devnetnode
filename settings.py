@@ -14,6 +14,18 @@
 
 tftpserver = '10.24.35.253'
 # tftpserver = '192.168.0.123'
+# sudo apt install tftpd-hpa
+# $ cat /etc/default/tftpd-hpa
+# sudo nano /etc/default/tftpd-hpa
+#/etc/default/tftpd-hpa 
+# TFTP_USERNAME="tftp" 
+# TFTP_DIRECTORY="/srv/tftp" 
+# TFTP_ADDRESS=":69" 
+# TFTP_OPTIONS="--secure --create"
+# sudo chown tftp tftp_temp/
+# service tftpd-hpa restart  
+# sudo systemctl status tftp-hpa.service
+# sudo systemctl restart tftp-hpa.service
 
 sideframecolour = 'light blue'
 bottomframecolour = 'light blue'

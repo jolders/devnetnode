@@ -12,6 +12,12 @@ from netmiko import Netmiko, ConnectHandler, NetMikoTimeoutException, NetMikoAut
 from connecttodb import getdevicefromid
 from PIL import ImageTk, Image
 import regex as re
+from netmiko.exceptions import NetMikoAuthenticationException
+from netmiko.exceptions import NetMikoTimeoutException
+from netmiko.exceptions import SSHException
+# from netmiko.ssh_exception import NetMikoAuthenticationException
+# from netmiko.ssh_exception import NetMikoTimeoutException
+# from netmiko.ssh_exception import SSHException
 
 # this file uploads a configuration file to a Cisco device
 # configuploadtftp
@@ -294,9 +300,24 @@ def configuploadtftp(self):
                     self.progstatus.set(0.8)
                     self.update_idletasks()
             
+            
+            # netmiko.exceptions.NetmikoTimeoutException
+            except NetMikoAuthenticationException as AuthException:
+                print("326 Authentication Error %s" % AuthException)
+                self.grpdesetry.insert(INSERT, f"***--- {self.returnedname.get()} ({self.returnedip.get()}) ---*** \n Authentication Error \n {AuthException}")
+            except NetMikoTimeoutException as TimeoutException:
+                #raise ConnectError(TimeoutException.args[0])
+                print("331 No Valid Connections Error SSH connection 'USERNAME ?': %s" % TimeoutException)
+                self.grpdesetry.insert(INSERT, f"Timeout Exception Error ***--- {self.returnedname.get()} ({self.returnedip.get()}) ---*** \n {TimeoutException}")
+            except SSHException as sshexception:
+                print("An netmiko sshexception Error %s" % sshexception)
+                self.grpdesetry.insert(INSERT, f"SSHException Error ***--- {self.returnedname.get()} ({self.returnedip.get()}) ---*** \n {sshexception}")
+            except Exception as unknown_error:
+                print("339 An netmiko Unknown Error %s"+ str(unknown_error))
+                self.grpdesetry.insert(INSERT, f"Unknown Error ***--- {self.returnedname.get()} ({self.returnedip.get()}) ---*** \n  \n {unknown_error}")
             except:
-                print("An netmiko function exception occurred in tftpconfig(uploadtftp.py)")
-                self.grpdesetry.insert(INSERT, "5) An error occured in the try block \n")
+                print(f"An netmiko function exception occurred in tftpconfig(uploadtftp.py) {self.returnedname.get()},{self.returnedip.get()}")
+                self.grpdesetry.insert(INSERT, f"5) An undefined error occured in the try block on: {self.returnedname.get()},{self.returnedip.get()}\n")
             
             finally:
                 print("Doing net_connect.disconnect")

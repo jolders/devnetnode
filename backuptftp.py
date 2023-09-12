@@ -12,6 +12,12 @@ import shutil
 from settings import *
 from connecttodb import getdevicefromid
 import regex as re
+from netmiko.exceptions import NetMikoAuthenticationException
+from netmiko.exceptions import NetMikoTimeoutException
+from netmiko.exceptions import SSHException
+# from netmiko.ssh_exception import NetMikoAuthenticationException
+# from netmiko.ssh_exception import NetMikoTimeoutException
+# from netmiko.ssh_exception import SSHException
 
 def tftpbtngo(self, selectedid):
     
@@ -75,12 +81,12 @@ def tftpbtngo(self, selectedid):
     # cisco_ios
     # cisco_xe
     device = {
-    'device_type': f'{rettype}',
-    'host': f'{retip}',
-    'username': f'{retusername}',
-    'password': f'{retpassword}',
-    'secret': f'{retpassword}'
-    }
+        'device_type': f'{rettype}',
+        'host': f'{retip}',
+        'username': f'{retusername}',
+        'password': f'{retpassword}',
+        'secret': f'{retpassword}'
+        }
     print("--------------")
     print(device['host']) # ip address
     print(device['device_type']) # device type
@@ -136,9 +142,22 @@ def tftpbtngo(self, selectedid):
             ##################################################################################
             
             net_connect.disconnect
-            
+
+    except NetMikoAuthenticationException as AuthException:
+        print("151 Authentication Error %s" % AuthException)
+        self.cgouttxtbx.insert(INSERT, f"***--- {hostname} ({retip}) ---*** \n Authentication Error \n {AuthException}")
+    except NetMikoTimeoutException as TimeoutException:
+        #raise ConnectError(TimeoutException.args[0])
+        print("155 No Valid Connections Error SSH connection 'USERNAME ?': %s" % TimeoutException)
+        self.cgouttxtbx.insert(INSERT, f"Timeout Exception Error ***--- {hostname} ({retip}) ---*** \n {TimeoutException}")
+    except SSHException as sshexception:
+        print("158 An netmiko sshexception Error %s" % sshexception)
+        self.cgouttxtbx.insert(INSERT, f"SSHException Error ***--- {hostname} ({retip}) ---*** \n {sshexception}")
+    except Exception as unknown_error:
+        print("161 An netmiko Unknown Error %s"+ str(unknown_error))
+        self.cgouttxtbx.insert(INSERT, f"Unknown Error ***--- {hostname} ({retip}) ---*** \n  \n {unknown_error}")
     except:
-        print("A netmiko function exception occurred in tftpconfig(backuptftp.py)")
+        print("164 A netmiko function exception occurred in tftpconfig(backuptftp.py)")
         self.cgouttxtbx.insert(INSERT, f"6) A netmiko connection exception occurred: {device['host']}\n")
     
     finally:

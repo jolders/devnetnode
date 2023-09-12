@@ -29,7 +29,7 @@
 8) regex
 
 # Settings File (settings.py).
-****>>>>---YOU WILL NEED TO CHANGE ITEMS IN THIS FILE DEPENDING ON YOUR OWN INSTALLATION
+****>>>>---YOU SHOULD BE GOOD TO USE LINUX FILE DIRECTORY forwardslash, WINDOWS SHOULD SORT IT OUT
 1) tftpserver = '10.24.35.253' # Change to your TFTP server
 2) directorylocation = "C:\\Shared\\NetDevApp3\\cisco12ct\\devicedata\\tftp_temp\\" # Windows directory identification example
 3) directorylocation = "/Shared/NetDevApp3/cisco12ct/devicedata/tftp_temp/" # Linux directory identification example
@@ -47,6 +47,21 @@ Sometimes Netmiko will complain.
 2) from netmiko.exceptions import NetMikoAuthenticationException
 3) from netmiko.exceptions import NetMikoTimeoutException
 4) from netmiko.exceptions import SSHException
+
+# TFTP server issues
+1) tftpserver = '192.168.0.123' (settings.py = Change this to suit your server ip)
+2) sudo apt install tftpd-hpa
+3) sudo nano /etc/default/tftpd-hpa
+4) /etc/default/tftpd-hpa 
+5)  TFTP_USERNAME="tftp" 
+6)  TFTP_DIRECTORY="/" 
+7)  TFTP_ADDRESS=":69" 
+8)  TFTP_OPTIONS="--secure --create"
+9)  sudo chown tftp tftp_temp/
+10) service tftpd-hpa restart  
+11) sudo systemctl status tftp-hpa.service
+12) sudo systemctl restart tftp-hpa.servic
+
 
 
 

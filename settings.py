@@ -1,16 +1,16 @@
 # Location of files
-# dbfile = "C:\\Shared\\NetDevApp3\\cisco12ct\\netAdmin.db"
-# directorypathroot ="C:\\Shared\\NetDevApp3\\cisco12ct"
-# devicegroups = "C:\\Shared\\NetDevApp3\\cisco12ct\\devicegroups"
-# pythonicon = "C:\\Shared\\NetDevApp3\\cisco12ct\\myicon64.png"
-# devicesaveddata = "C:\\Shared\\NetDevApp3\\cisco12ct\\devicedata\\"
-# tftprootdir = "C:\\Shared\\NetDevApp3\\cisco12ct\\devicedata\\tftp_temp"
+# dbfile = "C:\\Shared\devnetnode\\devnetnode\\netAdmin.db"
+# directorypathroot ="C:\\Shared\devnetnode\\devnetnode"
+# devicegroups = "C:\\Shared\devnetnode\\devnetnode\\devicegroups"
+# pythonicon = "C:\\Shared\devnetnode\\devnetnode\\myicon64.png"
+# devicesaveddata = "C:\\Shared\devnetnode\\devnetnode\\devicedata\\"
+# tftprootdir = "C:\\Shared\devnetnode\\devnetnode\\devicedata\\tftp_temp"
 
 #TFTP_SERVER = tftpserver (Windows)
-# directorylocation = "C:\\Shared\\NetDevApp3\\cisco12ct\\devicedata\\tftp_temp\\"
-# filesource = "C:\\Shared\\NetDevApp3\\cisco12ct\\devicedata\\tftp_temp\\"
-#filedestination = "C:\\Shared\\NetDevApp3\\cisco12ct\\devicedata\\{hostname}\\"
-# changetoDEVICEDATAdirectory = "C:\\Shared\\NetDevApp3\\cisco12ct"
+# directorylocation = "C:\\Shared\devnetnode\\devnetnode\\devicedata\\tftp_temp\\"
+# filesource = "C:\\Shared\devnetnode\\devnetnode\\tftp_temp\\"
+#filedestination = "C:\\Shared\devnetnode\\devnetnode\\devicedata\\{hostname}\\"
+# changetoDEVICEDATAdirectory = "C:\\Shared\devnetnode\\devnetnode"
 
 tftpserver = '10.24.35.253'
 # tftpserver = '192.168.0.123'
@@ -21,18 +21,19 @@ topframeacolour = 'light blue'
 topframebcolour = 'light blue'
 
 # Linux Format of file locations
-dbfile = "/Shared/NetDevApp3/cisco12ct/netAdmin.db"
-directorypathroot ="/Shared/NetDevApp3/cisco12ct/"
-devicegroups = "/Shared/NetDevApp3/cisco12ct/devicegroups"
-pythonicon = "/Shared/NetDevApp3/cisco12ct/pythonicon.ico"
-devicesaveddata = "/Shared/NetDevApp3/cisco12ct/devicedata/"
-tftprootdir = "/Shared/NetDevApp3/cisco12ct/devicedata/tftp_temp"
+dbfile = "/Shared/devnetnode/devnetnode/netAdmin.db"
+
+directorypathroot ="/Shared/devnetnode/devnetnode/"
+devicegroups = "/Shared/devnetnode/devnetnode/devicegroups"
+pythonicon = "/Shared/devnetnode/devnetnode/pythonicon.ico"
+devicesaveddata = "/Shared/devnetnode/devnetnode/devicedata/"
+tftprootdir = "/Shared/devnetnode/devnetnode/devicedata/tftp_temp"
 
 #TFTP_SERVER = tftpserver Linux
-directorylocation = "/Shared/NetDevApp3/cisco12ct/devicedata/tftp_temp/"
-filesource = '/Shared/NetDevApp3/cisco12ct/devicedata/tftp_temp/'
-filedestination = '/Shared/NetDevApp3/cisco12ct/devicedata/'
-changetoDEVICEDATAdirectory = '/Shared/NetDevApp3/cisco12ct'
+directorylocation = "/Shared/devnetnode/devnetnode/devicedata/tftp_temp/"
+filesource = '/Shared/devnetnode/devnetnode/devicedata/tftp_temp/'
+filedestination = '/Shared/devnetnode/devnetnode/devicedata/'
+changetoDEVICEDATAdirectory = '/Shared/devnetnode/devnetnode'
 
 listOfCMDs = ['show version',
               'show running-config',

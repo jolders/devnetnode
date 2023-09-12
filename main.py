@@ -288,6 +288,10 @@ class App(tk.Tk):
         tftpMenu.add_separator()
         tftpMenu.add_command(label="Backup Group (TFTP tftpconfiggrp)", command=tftpconfiggrp)
         tftpMenu.add_command(label="Restore Group (TFTP)", command=tftprestoregroup)
+        
+        
+        versionMenu = Menu(myMenu1, tearoff=0)
+        myMenu1.add_cascade(label="                                                                                                                                                                                                                             Version 0.01 (beta)", menu=versionMenu)
         # ------ Menu END ------
 
         def topFrame(self):

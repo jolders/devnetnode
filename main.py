@@ -291,7 +291,7 @@ class App(tk.Tk):
         
         
         versionMenu = Menu(myMenu1, tearoff=0)
-        myMenu1.add_cascade(label="                                                                                                                                                                                                                             Version 0.01 (beta)", menu=versionMenu)
+        myMenu1.add_cascade(label="                                                                                                                                         Version 0.02 (beta)", menu=versionMenu)
         # ------ Menu END ------
 
         def topFrame(self):

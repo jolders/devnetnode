@@ -26,14 +26,14 @@ def saveframeoutput(self):
         thisdevicename = f"{self.groupoptionselected.get()}"
         print(f"ON=self.groupswitch_var on/off value")
         print(f"ON=self.groupswitch_var thisdevicename: {thisdevicename}")
-        saveoutputroot = f"/Shared/NetDevApp3/cisco12ct/devicegroups/"
+        saveoutputroot = devicegroups # f"/Shared/NetDevApp3/cisco12ct/devicegroups/"
         print(f"ON=self.groupswitch_var saveoutputroot : {saveoutputroot}")
     else:
         print(f"OFF=self.groupswitch_var value: {self.groupswitch_var.get()}")
         thisdevicename = f"{self.returnedname.get()}"
         print(f"OFF=self.groupswitch_var off value")
         print(f"OFF=self.groupswitch_var thisdevicename: {thisdevicename}")
-        saveoutputroot = f"/Shared/NetDevApp3/cisco12ct/devicedata/"
+        saveoutputroot = devicesaveddata # f"/Shared/NetDevApp3/cisco12ct/devicedata/"
         print(f"OFF=self.groupswitch_var saveoutputroot : {saveoutputroot}")
                                                                     
 

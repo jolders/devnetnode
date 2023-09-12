@@ -636,7 +636,7 @@ def configuploadtftp(self):
     self.chkbxrunningcfg.grid(row=8, column=0, pady=10, sticky=W, padx=(25,0))
     self.chkbxstartupcfg = ctk.CTkCheckBox(self.tftpuploadwindow, text="startup-config", command=lambda:chkbxstartupcfg_event(self), variable=self.chkbxstartupcfg_var, onvalue="on", offvalue="off", fg_color="green4", hover_color="dark slate gray", border_color="dark slate gray", border_width=2, text_color_disabled="gray")
     self.chkbxstartupcfg.grid(row=8, column=1, pady=10, sticky=W)
-    self.checkboxcstrn = ctk.CTkCheckBox(self.tftpuploadwindow, text="copy startup > runnning", command=lambda:checkboxcstrn_event(self), variable=self.checkboxcstrn_var, onvalue="on", offvalue="off", fg_color="green4", hover_color="dark slate gray", border_color="dark slate gray", border_width=2, text_color_disabled="gray")
+    self.checkboxcstrn = ctk.CTkCheckBox(self.tftpuploadwindow, text="copy startup > runnning", command=lambda:checkboxcstrn_event(self), variable=self.checkboxcstrn_var, state='disabled', onvalue="on", offvalue="off", fg_color="green4", hover_color="dark slate gray", border_color="gray", border_width=2, text_color_disabled="gray")
     self.checkboxcstrn.grid(row=8, column=2, pady=10, padx=(0,35))
     self.virtspr1 = ttk.Separator(self.tftpuploadwindow, orient='vertical')
     self.virtspr1.grid(row=7, column=1, sticky='nsw', rowspan=2, pady=(10,5), padx=(180,1))

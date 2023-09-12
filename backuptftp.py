@@ -147,7 +147,7 @@ def tftpbtngo(self, selectedid):
             self.cgouttxtbx.insert(INSERT, f"6) File was sucessfully transfered: {output[output.rindex('!')+1:]}\n")
         except:
             print("Could not print the output of the netmiko function tftpconfig(backuptftp.py)")
-            self.cgouttxtbx.insert(INSERT, f"6) Could not print the output")
+            self.cgouttxtbx.insert(INSERT, f"6) Could not print the output\n")
     
     print("Running the second try method")
     print(f"Directory = {directorylocation}")

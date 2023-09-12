@@ -12,12 +12,12 @@ import json
 from connecttodb import getdevicefromid
 import shutil
 from netmiko import ConnectHandler 
-from netmiko.exceptions import NetMikoAuthenticationException
-from netmiko.exceptions import NetMikoTimeoutException
-from netmiko.exceptions import SSHException
-#from netmiko.ssh_exception import NetMikoAuthenticationException
-#from netmiko.ssh_exception import NetMikoTimeoutException
-#from netmiko.ssh_exception import SSHException
+# from netmiko.exceptions import NetMikoAuthenticationException
+# from netmiko.exceptions import NetMikoTimeoutException
+# from netmiko.exceptions import SSHException
+from netmiko.ssh_exception import NetMikoAuthenticationException
+from netmiko.ssh_exception import NetMikoTimeoutException
+from netmiko.ssh_exception import SSHException
 
 
 def configuploadtftpgroup(self):

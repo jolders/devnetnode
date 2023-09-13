@@ -37,7 +37,8 @@ dbfile = "/Shared/devnetnode/devnetnode/netAdmin.db"
 
 directorypathroot ="/Shared/devnetnode/devnetnode/"
 devicegroups = "/Shared/devnetnode/devnetnode/devicegroups"
-pythonicon = "/Shared/devnetnode/devnetnode/pythonicon.ico"
+pythonicon = "/Shared/devnetnode/devnetnode/netdevnode2.png"
+#pythonicon = "/Shared/devnetnode/devnetnode/pythonicon.ico"
 devicesaveddata = "/Shared/devnetnode/devnetnode/devicedata/"
 tftprootdir = "/Shared/devnetnode/devnetnode/devicedata/tftp_temp"
 

@@ -283,15 +283,15 @@ class App(tk.Tk):
 
         tftpMenu = Menu(myMenu1, tearoff=0)
         myMenu1.add_cascade(label="TFTP Backup & Restore", menu=tftpMenu)
-        tftpMenu.add_command(label="Backup Device (TFTP tftpconfig)", command=tftpconfig)
-        tftpMenu.add_command(label="Restore Device (TFTP tftupload)", command=tftupload)
+        tftpMenu.add_command(label="Backup Device (TFTP)", command=tftpconfig)
+        tftpMenu.add_command(label="Restore Device (TFTP)", command=tftupload)
         tftpMenu.add_separator()
-        tftpMenu.add_command(label="Backup Group (TFTP tftpconfiggrp)", command=tftpconfiggrp)
+        tftpMenu.add_command(label="Backup Group (TFTP)", command=tftpconfiggrp)
         tftpMenu.add_command(label="Restore Group (TFTP)", command=tftprestoregroup)
         
         
         versionMenu = Menu(myMenu1, tearoff=0)
-        myMenu1.add_cascade(label="                                                                                                                                         Version 0.02 (beta)", menu=versionMenu)
+        myMenu1.add_cascade(label="                                                                                                                                         Version 0.03 (beta)", menu=versionMenu)
         # ------ Menu END ------
 
         def topFrame(self):

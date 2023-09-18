@@ -3,6 +3,9 @@
 2) Python & Netmiko provide funtional aspects.
 3) Tkinter and Customtkinter presents a GUI to the user.
 
+# Youtube introduction
+1) https://www.youtube.com/watch?v=k-OvfekZ0YQ
+
 # Device key features:
 1) Create device profiles (ip address, hostname, Username, password, device type, config file) 
 2) Send commands to Cisco IOS devices.

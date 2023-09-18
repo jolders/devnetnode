@@ -30,6 +30,7 @@
 6) Netmiko, paramiko
 7) PIL, ImageTk, Image
 8) regex
+9) tftpd-hpa (TFTP Server)
 
 # Settings File (settings.py).
 ****>>>>---YOU SHOULD BE GOOD TO USE LINUX FILE DIRECTORY forwardslash, WINDOWS SHOULD SORT IT OUT

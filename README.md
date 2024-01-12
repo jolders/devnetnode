@@ -35,9 +35,9 @@
 # Settings File (settings.py).
 ****>>>>---YOU SHOULD BE GOOD TO USE LINUX FILE DIRECTORY forwardslash, WINDOWS SHOULD SORT IT OUT
 1) tftpserver = '10.24.35.253' # Change to your TFTP server
-# Settings for a windows environment
+****>>>>--- Settings for a windows environment
 2) directorylocation = "C:\\Shared\\NetDevApp3\\devnetnode\\devicedata\\tftp_temp\\" # Windows directory identification example
-# Settings for a Linux environment
+****>>>>--- Settings for a Linux environment
 4) directorylocation = "/Shared/NetDevApp3/devnetnode/devicedata/tftp_temp/" # Linux directory identification example
 
 # Ammend this list to present commands you want.

@@ -132,10 +132,13 @@ def tftpbtngo(self, selectedid):
             ################################################################################
             print("backupftp.py tftpbtngo Line:112 Select Windows(111) or Linux(108)")
             #use this for Linux
-            output += net_connect.send_command_timing(f"{directorylocation}"+"/"+f"{hostname}_"+f"{filedatetime}_"+f"{self.setbackuptypevar.get()}"+f"_{self.setfileidtypevar.get()}"+"\n")
+            # If problems try switching out the following two lines for each other
+            # output += net_connect.send_command_timing(f"{directorylocation}"+"/"+f"{hostname}_"+f"{filedatetime}_"+f"{self.setbackuptypevar.get()}"+f"_{self.setfileidtypevar.get()}"+"\n")
+            output += net_connect.send_command_timing(f"{hostname}_"+f"{filedatetime}_"+f"{self.setbackuptypevar.get()}"+f"_{self.setfileidtypevar.get()}"+"\n")
+            
             self.cgouttxtbx.insert(INSERT, f"4) The TFTP temporary save directory will be: {directorylocation}"+"\n")
             self.cgouttxtbx.insert(INSERT, f"5) The filename will be:\n{hostname}_"+f"{filedatetime}_"+f"{self.setbackuptypevar.get()}"+f"_{self.setfileidtypevar.get()}"+"\n")
-            
+            print(f"this is output:{output}")
             # Use this for windows
             # output += net_connect.send_command_timing(f"{hostname}_"+f"{filedatetime}_"+f"{self.setbackuptypevar.get()}"+f"_{self.setfileidtypevar.get()}"+"\n")
             # self.cgouttxtbx.insert(INSERT, f"3) The filename will be: {hostname}_"+f"{filedatetime}_"+f"{self.setbackuptypevar.get()}"+f"_{self.setfileidtypevar.get()}"+"\n")

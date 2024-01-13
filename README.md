@@ -3,6 +3,9 @@
 2) Python & Netmiko provide funtional aspects.
 3) Tkinter and Customtkinter presents a GUI to the user.
 
+# Youtube introduction
+1) https://www.youtube.com/watch?v=k-OvfekZ0YQ
+
 # Device key features:
 1) Create device profiles (ip address, hostname, Username, password, device type, config file) 
 2) Send commands to Cisco IOS devices.
@@ -27,12 +30,14 @@
 6) Netmiko, paramiko
 7) PIL, ImageTk, Image
 8) regex
+9) tftpd-hpa (TFTP Server)
 
 # Settings File (settings.py).
 ****>>>>---YOU SHOULD BE GOOD TO USE LINUX FILE DIRECTORY forwardslash, WINDOWS SHOULD SORT IT OUT
 1) tftpserver = '10.24.35.253' # Change to your TFTP server
-2) directorylocation = "C:\\Shared\\NetDevApp3\\cisco12ct\\devicedata\\tftp_temp\\" # Windows directory identification example
-3) directorylocation = "/Shared/NetDevApp3/cisco12ct/devicedata/tftp_temp/" # Linux directory identification example
+2) directorylocation = "C:\\Shared\\NetDevApp3\\devnetnode\\devicedata\\tftp_temp\\" # ****>>>>--- settings.py for a Windows environment
+3) directorylocation = "/Shared/NetDevApp3/devnetnode/devicedata/tftp_temp/" # ****>>>>--- settings.py for a Linux environment
+
 # Ammend this list to present commands you want.
 1) listOfCMDs = ['show version','show running-config','show ip interface brief','show ip route','show interface gigabitEthernet 0/0','show vlan']
 

@@ -127,13 +127,15 @@ def tftpbtngo(self, selectedid):
             output += net_connect.send_command_timing("\n")
             print("Try 2")
             self.cgouttxtbx.insert(INSERT, f"3) Accepting the tftp server ip address: {tftpserver}"+"\n")
+            print(f"3) Accepting the tftp server ip address: {tftpserver}")
         if "Destination filename" in output:
             ####### YOU WILL NEED TO HARDCODE THIS ? 
             ################################################################################
             print("backupftp.py tftpbtngo Line:112 Select Windows(111) or Linux(108)")
-            #use this for Linux
             # If problems try switching out the following two lines for each other
+            # use this for Windows
             # output += net_connect.send_command_timing(f"{directorylocation}"+"/"+f"{hostname}_"+f"{filedatetime}_"+f"{self.setbackuptypevar.get()}"+f"_{self.setfileidtypevar.get()}"+"\n")
+            # use this for Linux
             output += net_connect.send_command_timing(f"{hostname}_"+f"{filedatetime}_"+f"{self.setbackuptypevar.get()}"+f"_{self.setfileidtypevar.get()}"+"\n")
             
             self.cgouttxtbx.insert(INSERT, f"4) The TFTP temporary save directory will be: {directorylocation}"+"\n")
